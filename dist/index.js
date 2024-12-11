@@ -121,3 +121,38 @@ const getdata = (key) => {
     return person1[key];
 };
 console.log(getdata("name"));
+const genericfun = (n) => {
+    return n;
+};
+const genans1 = genericfun(5);
+const genans2 = genericfun("Arpit");
+const genans3 = genericfun(true);
+const genans4 = genericfun(person1);
+console.log(`This is value of genericans4 - ${genans4.name}`);
+;
+const groupofuser = [
+    {
+        name: "Arpit",
+        email: "arpit@gmail.com",
+        age: 19
+    },
+    {
+        name: "Abhi",
+        email: "abhi@gmail.com",
+        age: 22
+    },
+    {
+        name: "Aman",
+        email: "aman@gmail.com",
+        age: 20
+    },
+];
+// console.log(groupofuser)
+// console.log(groupofuser[0])
+// console.log(groupofuser[0].name)
+// console.log(groupofuser[1]["name"])
+const filterbyname = (arr, target, value) => {
+    const val = arr.filter((item) => item[target] === value);
+    return val;
+};
+console.log(filterbyname(groupofuser, "name", "Abhi"));
