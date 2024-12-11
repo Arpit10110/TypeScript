@@ -182,3 +182,29 @@ ppobjfun1({
     paid:true,
     discount:false
 })
+
+const form = document.getElementById("form") as HTMLFormElement;
+
+form.onsubmit=(e:SubmitEvent)=>{
+    e.preventDefault();
+    const inp = document.querySelector('.input') as HTMLInputElement;   
+    const inputvalue = Number(inp.value);
+    const showvalue = document.querySelector(".showvalue") as HTMLElement;
+    showvalue.innerHTML = String(inputvalue+20);
+}
+
+interface Person{
+    name:string,
+    course:string
+};
+
+const person1 : Person ={
+    name : "Arpit",
+    course : "B.tech"
+};
+
+const getdata =(key : keyof Person ) : string =>{
+    return person1[key];
+}
+
+console.log(getdata("name"));

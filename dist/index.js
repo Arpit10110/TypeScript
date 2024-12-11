@@ -104,3 +104,20 @@ ppobjfun1({
     paid: true,
     discount: false
 });
+const form = document.getElementById("form");
+form.onsubmit = (e) => {
+    e.preventDefault();
+    const inp = document.querySelector('.input');
+    const inputvalue = Number(inp.value);
+    const showvalue = document.querySelector(".showvalue");
+    showvalue.innerHTML = String(inputvalue + 20);
+};
+;
+const person1 = {
+    name: "Arpit",
+    course: "B.tech"
+};
+const getdata = (key) => {
+    return person1[key];
+};
+console.log(getdata("name"));
